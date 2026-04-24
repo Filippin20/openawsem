@@ -192,19 +192,14 @@ log_section "7/7 — Criando ${AWSEM_CONFIG_FILE}"
 mkdir -p "${AWSEM_CONFIG_DIR}"
 
 cat > "${AWSEM_CONFIG_FILE}" << CONFIGEOF
-[Paths]
-# Caminho raiz da instalação do OpenAWSEM
-OPENAWSEM_LOCATION = ${OPENAWSEM_DIR}
-
-# Caminho para o binário do Stride
-STRIDE_BINARY = ${STRIDE_INSTALL_DIR}/stride
-
-[Simulation]
-# Plataforma padrão para OpenMM: CUDA, OpenCL, CPU
-DEFAULT_PLATFORM = CPU
-
-# Temperatura padrão em Kelvin
-DEFAULT_TEMPERATURE = 300
+[Data Paths]
+blast = /home/USER/data/database/cullpdb_pc80_res3.0_R1.0_d160504_chains29712
+gro = /home/USER/data/Gros
+pdb = /home/USER/data/PDBs
+index = /home/USER/data/Indices
+pdbfail = /home/USER/data/notExistPDBsList
+pdbseqres = /home/USER/data/pdb_seqres.txt
+topology = /home/USER/topology
 CONFIGEOF
 
 log_ok "Arquivo config.ini criado em ${AWSEM_CONFIG_FILE}"
