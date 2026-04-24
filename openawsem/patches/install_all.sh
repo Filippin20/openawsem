@@ -80,7 +80,7 @@ conda install -c conda-forge \
     "openmm>=8.0" \
     mdtraj \
     pdbfixer \
-    numpy \
+    "numpy<2.0"\
     pandas \
     scipy \
     matplotlib \
