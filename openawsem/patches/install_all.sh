@@ -88,7 +88,7 @@ conda install -c conda-forge \
 
 log_info "Instalando dependências pip adicionais..."
 pip install --quiet \
-    biopython \
+    "biopython==1.79" \
     networkx \
     pytest
 
