@@ -110,7 +110,7 @@ export PATH=$PATH:/caminho/para/Predict_Property/
 
 O OpenAWSEM permite configurar os caminhos de armazenamento de dados:
 
-1. Crie o diretório `.awsem` na sua pasta home
+1. Crie o diretório `.awsem` na sua pasta home (No caso, já está criado!)
 2. Dentro de `.awsem`, crie o arquivo `config.ini` com os caminhos dos dados
 
 Os caminhos padrão apontam para o diretório `data/` dentro do módulo OpenAWSEM.  
