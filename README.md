@@ -91,7 +91,8 @@ echo 'export PATH=$PATH:'`pwd` >> ~/.bashrc
 ```bash
 wget https://files.rcsb.org/pub/pdb/derived_data/pdb_seqres.txt
 OPENAWSEM_LOCATION=$(python -c "import openawsem; print(openawsem.__location__)")
-cp pdb_seqres.txt openawsem/data
+mkdir -p "$OPENAWSEM_LOCATION/data"
+cp pdb_seqres.txt "$OPENAWSEM_LOCATION/data/"
 ```
 
 ### Predict_Property
