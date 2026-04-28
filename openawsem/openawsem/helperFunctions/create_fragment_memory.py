@@ -185,7 +185,7 @@ def create_fragment_memories(database, fasta_file, memories_per_position, brain_
             # download PDBs if not exist    ##from script 'pdbget' (original author
             # unknown)
             if not os.path.isfile(pdb_dir + pdbID.upper() + ".pdb"):
-                exeline = "wget ftp://ftp.wwpdb.org/pub/pdb/data/structures/divided/pdb/"
+                exeline = "wget https://files.wwpdb.org/pub/pdb/data/structures/divided/pdb/"
                 exeline += pdbIDsecond + pdbIDthird + "/pdb" + pdbID + ".ent.gz"
                 os.system(exeline)
                 print(exeline)
@@ -289,8 +289,8 @@ def create_fragment_memories(database, fasta_file, memories_per_position, brain_
                     if not os.path.isfile(pdb_seqres):
                         import urllib
                         print("Need to download pdb_seqres.txt from PDB!")
-                        print("Downloading pdb_seqres.txt from ftp://ftp.wwpdb.org/pub/pdb/derived_data/pdb_seqres.txt...")
-                        url = "ftp://ftp.wwpdb.org/pub/pdb/derived_data/pdb_seqres.txt"
+                        print("Downloading pdb_seqres.txt from https://files.wwpdb.org/pub/pdb/derived_data/pdb_seqres.txt...")
+                        url = "https://files.wwpdb.org/pub/pdb/derived_data/pdb_seqres.txt"
                         try:
                             urllib.request.urlretrieve(url, pdb_seqres)
                             print(f"Download complete. Saved to {pdb_seqres}")

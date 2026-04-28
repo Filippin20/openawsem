@@ -213,7 +213,7 @@ for record in SeqIO.parse(handle, "fasta"):
         # download PDBs if not exist    ##from script 'pdbget' (original author
         # unknown)
         if not os.path.isfile(pdbDir + pdbID.upper() + ".pdb"):
-            exeline = "wget ftp://ftp.wwpdb.org/pub/pdb/data/structures/divided/pdb/"
+            exeline = "wget https://files.wwpdb.org/pub/pdb/data/structures/divided/pdb/"
             exeline += pdbIDsecond + pdbIDthird + "/pdb" + pdbID + ".ent.gz"
             os.system(exeline)
             print(exeline)
@@ -317,8 +317,8 @@ for record in SeqIO.parse(handle, "fasta"):
                 if not os.path.isfile(pdbSeqres):
                     import urllib
                     print("Need to download pdb_seqres.txt from PDB!")
-                    print("Downloading pdb_seqres.txt from ftp://ftp.wwpdb.org/pub/pdb/derived_data/pdb_seqres.txt...")
-                    url = "ftp://ftp.wwpdb.org/pub/pdb/derived_data/pdb_seqres.txt"
+                    print("Downloading pdb_seqres.txt from https://files.wwpdb.org/pub/pdb/derived_data/pdb_seqres.txt...")
+                    url = "https://files.wwpdb.org/pub/pdb/derived_data/pdb_seqres.txt"
                     try:
                         urllib.request.urlretrieve(url, pdbSeqres)
                         print(f"Download complete. Saved to {pdbSeqres}")

@@ -555,7 +555,7 @@ def create_fragment_memories(database, fasta_file, memories_per_position, brain_
                     if not os.path.isfile(pdb_seqres):
                         print(pdb_seqres)
                         print("Need to download pdb_seqres.txt from PDB!")
-                        print("ftp://ftp.wwpdb.org/pub/pdb/derived_data/pdb_seqres.txt")
+                        print("https://files.wwpdb.org/pub/pdb/derived_data/pdb_seqres.txt")
                         print("Copy to $HOME/opt/script/")
                         exit()
                     fastaFile = pdbID + '_' + chainID.upper()
